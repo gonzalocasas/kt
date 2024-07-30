@@ -15,12 +15,7 @@
           font-weight: 100;
           font-size: 4rem;
           line-height: 5rem;
-          /* display: flex;
-          justify-content: center;
-          align-items: center; */
           margin: 10rem;
-          /* height: 100vh;
-          margin: 0; */
           background-color: #f0f0f0;
         }
 
@@ -45,15 +40,35 @@
           font-weight: 200;
         }
 
-        #message {
-            /* text-align: start; */
-        }
         #countdown {
-            /* text-align: center; */
             font-family: 'Fira Code', sans-serif;
             font-weight: 300;
             font-size: 2em;
         }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                margin: 2rem;
+                margin-top: 8rem;
+                font-size: 1.8rem;
+                line-height: 2.0rem;
+            }
+            #countdown {
+                font-size: 1.5em;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            body {
+                margin: 3rem;
+                margin-top: 8rem;
+                line-height: 3.5rem;
+            }
+            #countdown {
+                font-size: 1.5em;
+            }
+        }
+
     </style>
 </head>
 <body>

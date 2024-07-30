@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to July 31, 2024</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,200,700');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+        @import url('https://use.fontawesome.com/releases/v5.4.1/css/all.css');
+
+        body {
+          min-height: 100%;
+          font-family: 'Fira Sans', sans-serif;
+          font-weight: 100;
+          font-size: 4rem;
+          line-height: 5rem;
+          /* display: flex;
+          justify-content: center;
+          align-items: center; */
+          margin: 10rem;
+          /* height: 100vh;
+          margin: 0; */
+          background-color: #f0f0f0;
+        }
+
+        a {
+          transition: all cubic-bezier(0.4, 0.0, 0.2, 1) .7s;
+          transform: translateX(0);
+          display: inline-block;
+          border: 1px dotted white;
+          color: black;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
+        a:hover {
+          transform: translateX(10px);
+          border: 1px dotted #003076;
+          background-color: #efefef;
+          color: #003076;
+        }
+
+        a.light {
+          font-weight: 200;
+        }
+
+        #message {
+            /* text-align: start; */
+        }
+        #countdown {
+            /* text-align: center; */
+            font-family: 'Fira Code', sans-serif;
+            font-weight: 300;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <p id="message"></p>
+    <div id="countdown"></div>
+    <script>
+        function countdown() {
+            const eventDate = new Date('July 31, 2024 08:30:00 GMT+0200').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML =
+                String(hours).padStart(2, '0') + "h " + String(minutes).padStart(2, '0') + "m " + String(seconds).padStart(2, '0') + "s ";
+                // hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById('countdown').innerHTML = "EXPIRED";
+            }
+        }
+
+        countdown();
+        const x = setInterval(countdown, 1000);
+        document.getElementById('message').innerHTML = decodeURIComponent(escape(atob("zqTOvyDOms6xz4TOtc+BzrnOvc6szrrOuSDPg8+EzrcgzpbPhc+Bzq/Ph863IQ==")));
+
+    </script>
+</body>
+</html>

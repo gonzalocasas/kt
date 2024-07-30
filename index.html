@@ -14,8 +14,6 @@
           font-family: 'Fira Sans', sans-serif;
           font-weight: 100;
           font-size: 4rem;
-          line-height: 5rem;
-          margin: 10rem;
           background-color: #f0f0f0;
         }
 
@@ -43,7 +41,6 @@
         #countdown {
             font-family: 'Fira Code', sans-serif;
             font-weight: 300;
-            font-size: 2em;
         }
 
         @media only screen and (max-width: 768px) {
@@ -51,7 +48,7 @@
                 margin: 2rem;
                 margin-top: 8rem;
                 font-size: 1.8rem;
-                line-height: 2.0rem;
+                line-height: 2rem;
             }
             #countdown {
                 font-size: 1.5em;
@@ -68,7 +65,16 @@
                 font-size: 1.5em;
             }
         }
-
+        @media only screen and (min-width: 992px) {
+            body {
+                margin: 10rem;
+                line-height: 5rem;
+                font-size: 4rem;
+            }
+            #countdown {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
 <body>
